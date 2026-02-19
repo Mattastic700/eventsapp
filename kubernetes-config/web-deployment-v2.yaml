@@ -3,18 +3,18 @@ kind: Deployment
 metadata:
  labels:
    app: events-web
- name: events-web-v2
+ name: events-web
 spec:
- replicas: 2
+ replicas: 4
  selector:
    matchLabels:
      app: events-web
-     ver: v2.0
+     ver: v1.0
  template:
    metadata:
      labels:
        app: events-web
-       ver: v2.0
+       ver: v1.0
    spec:
      containers:
      - image: mattastic700/events-website:v2.0
